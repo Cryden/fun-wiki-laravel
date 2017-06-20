@@ -180,6 +180,9 @@ return [
         /* Socialite */
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+        /* Socialite providers */
+        SocialiteProviders\Manager\ServiceProvider::class,
+
     ],
 
     /*
