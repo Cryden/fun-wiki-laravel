@@ -29,7 +29,7 @@ class UserController extends Controller
 
     public function userInfo($user_id)
     {
-        return view('users');
+        return view('home');
     }
 }
 
