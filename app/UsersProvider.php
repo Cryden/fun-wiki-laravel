@@ -8,7 +8,7 @@ class UsersProvider extends Model
 {
     protected $table = 'users_providers';
 
-    protected $fillable = ['user_id', 'provider', 'provider_id'];
+    protected $fillable = ['user_id', 'provider', 'provider_id', 'remember_token'];
 
     public function user()
     {
