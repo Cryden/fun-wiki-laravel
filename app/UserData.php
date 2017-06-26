@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserProvider extends Model
+class UserData extends Model
 {
-    protected $table = 'users_providers';
 
-    protected $fillable = ['user_id', 'provider', 'provider_id'];
+	protected $table = 'user_data';
+
+    protected $fillable = ['user_id', 'user_slug', 'user_name', 'user_photo'];
 
     public function user()
     {

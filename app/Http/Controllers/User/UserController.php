@@ -5,6 +5,8 @@ namespace App\Http\Controllers\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\UserData;
+
 class UserController extends Controller
 {
     /**
@@ -29,7 +31,10 @@ class UserController extends Controller
 
     public function userInfo($user_id)
     {
-        return view('home');
+        $users = UserData::where( 'user_slug', $user_id)->first();
+        //dd($user->id);
+
+        return view('users.user', $users);
     }
 }
 
