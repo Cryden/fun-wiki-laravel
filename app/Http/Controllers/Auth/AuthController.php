@@ -9,7 +9,7 @@ use Auth;
 use Socialite;
 
 use App\User;
-use App\UsersProvider;
+use App\UserProvider;
 
 class AuthController extends Controller
 {
@@ -55,11 +55,7 @@ class AuthController extends Controller
     public function findOrCreateUser($user, $provider)
     {
         
-        $authUser = UsersProvider::where('provider_id', $user->id)->first();
-
-        //dd($authUser->user);
-        //$authUser = User::where('provider_id', $user->id)->first();
-        //dd($authUser)
+        $authUser = UserProvider::where('provider_id', $user->id)->first();
 
         if ($authUser) {
             $user = User::where('id', $authUser)->first();
@@ -73,7 +69,7 @@ class AuthController extends Controller
         }
 
         
-        $account = new UsersProvider([
+        $account = new UserProvider([
             'provider_id' => $user->getId(),
             'provider' => $provider]);
             
