@@ -43,10 +43,13 @@ class AuthController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver($provider)->user();
+        $getUser = Socialite::driver($provider)->user();
 
-        $authUser = $this->findOrCreateUser($user, $provider);
-        Auth::login($authUser, true);
+        //dd($getUser);
+
+        $user = $this->findOrCreateUser($getUser, $provider);
+
+        Auth::login($user, true);
         return redirect($this->redirectTo);
     }
 
@@ -61,10 +64,10 @@ class AuthController extends Controller
     public function findOrCreateUser($user, $provider)
     {
         
-        $authUser = UserProvider::where('provider_id', $user->id)->first();
-
-        if ($authUser) {
-            $user = User::where('id', $authUser)->first();
+        $userProvider = UserProvider::where('provider_id', $user->id)->first();
+        
+        if (isset($userProvider)) {
+            $user = User::where('id', $userProvider->user_id)->first();
             return $user;
         }
 
@@ -73,8 +76,6 @@ class AuthController extends Controller
         if (!$user_auth) {
             $user_auth = User::createByProvider($user);
         }
-
-        //dd($user);
 
         $account = new UserProvider([
             'provider_id' => $user->getId(),
@@ -86,14 +87,16 @@ class AuthController extends Controller
         $user_slug = 'id'.str_pad($user_auth->id, 10, "0", STR_PAD_LEFT);
         $user_name = $user->getName();
 
-        $account = new UserData([
-            'user_slug'     => $user_slug,
-            'user_name'     => $user_name,
-            'user_photo'    => $user->getAvatar(),
-        ]);
-            
-        $account->user()->associate($user_auth);
-        $account->save();
+        if (!UserData::where('user_slug', $user_slug)->first()) {
+            $account = new UserData([
+                'user_slug'     => $user_slug,
+                'user_name'     => $user_name,
+                'user_photo'    => $user->getAvatar(),
+            ]);
+                
+            $account->user()->associate($user_auth);
+            $account->save();
+        }
 
         return $user_auth;
     }

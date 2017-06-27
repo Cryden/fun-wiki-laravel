@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     public static function createByProvider($providerUser)
     {
-        return self::create([
+        return User::create([
             'email' => $providerUser->getEmail(),
             'name'  => $providerUser->getName(),
         ]);

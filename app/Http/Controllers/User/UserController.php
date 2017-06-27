@@ -32,7 +32,6 @@ class UserController extends Controller
     public function userInfo($user_id)
     {
         $users = UserData::where( 'user_slug', $user_id)->first();
-        //dd($user->id);
 
         return view('users.user', $users);
     }
