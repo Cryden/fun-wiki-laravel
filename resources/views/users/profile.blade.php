@@ -8,9 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @foreach ($users as $user)
-                        <p> {{ $user->user_name }} </p>
-                    @endforeach
+                        <p>Это пользователь {{ $user_name }}</p>
+                        <img src={{ $user_photo }}>
                 </div>
             </div>
         </div>

@@ -25,4 +25,5 @@ Route::get('auth/{provider}/callback', 	'Auth\AuthController@handleProviderCallb
 
 // User routes
 Route::get('users', 					'User\UserController@index');
+Route::get('user/profile', 				'User\UserController@userProfile')->name('profile');
 Route::get('user/{user_id}', 			'User\UserController@userInfo');

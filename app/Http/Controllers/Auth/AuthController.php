@@ -20,7 +20,7 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/user/profile';
 
     public function __construct()
     {
