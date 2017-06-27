@@ -1,7 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.main')
 
 @section('title')
-<title>{{ config('app.name', 'Laravel') }} | Dashboard </title>
+<title>{{ config('app.name', 'Laravel') }} | Main </title>
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    LARAVEL
                 </div>
             </div>
         </div>
