@@ -11,13 +11,14 @@
 |
 */
 
+
+// Main Routes
 Route::get('/', function () {
     return view('index');
 });
 
+// Auth Routes
 Auth::routes();
-
-Route::get('/home', 					'Admin\HomeController@index')->name('home');
 
 // OAuth Routes
 Route::get('auth/{provider}', 			'Auth\AuthController@redirectToProvider');
@@ -27,3 +28,6 @@ Route::get('auth/{provider}/callback', 	'Auth\AuthController@handleProviderCallb
 Route::get('users', 					'User\UserController@index');
 Route::get('user/profile', 				'User\UserController@userProfile')->name('profile');
 Route::get('user/{user_id}', 			'User\UserController@userInfo');
+
+// Dashboard routes
+Route::get('/home', 					'Admin\HomeController@index')->name('home');
