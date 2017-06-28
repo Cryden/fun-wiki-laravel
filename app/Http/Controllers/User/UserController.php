@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\UserData;
 use Auth;
+use Illuminate\Support\Facades\Cache;
 
 class UserController extends Controller
 {
@@ -28,8 +29,18 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = UserData::all();
-        return view('users.users', ['users' => $users]);
+        $users_data = UserData::all();
+        //dd($users_data);
+
+        foreach ($users_data as $key) {
+            //echo $key['user_id'];
+            //echo Cache::has('user-is-online-' . $key['user_id']).'<br/>';
+            $key['user_isOnline'] = Cache::has('user-is-online-' . $key['user_id']);
+        };
+
+        //dd($users_data);
+
+        return view('users.users', ['users_data' => $users_data]);
     }
 
     public function userInfo($user_id)

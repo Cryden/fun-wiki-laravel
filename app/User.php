@@ -34,4 +34,10 @@ class User extends Authenticatable
             'name'  => $providerUser->getName(),
         ]);
     }
+
+    public function isOnline()
+    {
+        return Cache::has('user-is-online-' . $this->id);
+    }
+    
 }

@@ -8,8 +8,12 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @foreach ($users as $user)
-                        <p> {{ $user->user_name }} </p>
+                    @foreach ($users_data as $user_data)
+                        <p> {{ $user_data->user_name }} 
+                        @if($user_data->user_isOnline)
+                            user is online!!
+                        @endif
+                        </p>
                     @endforeach
                 </div>
             </div>
