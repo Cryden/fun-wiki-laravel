@@ -9,7 +9,8 @@
 
                 <div class="panel-body">
                     @foreach ($users_data as $user_data)
-                        <p> {{ $user_data->user_name }} 
+                        <p> 
+                        <a href="{{ url('/user/'.$user_data->user_slug) }}">{{ $user_data->user_name }}</a>
                         @if($user_data->user_isOnline)
                             user is online!!
                         @endif
