@@ -12,7 +12,7 @@
                         <p> 
                         <a href="{{ url('/user/'.$user_data->user_slug) }}">{{ $user_data->user_name }}</a>
                         @if($user_data->user_isOnline)
-                            user is online!!
+                            user is online!!!
                         @endif
                         </p>
                     @endforeach
