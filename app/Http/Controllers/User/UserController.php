@@ -30,15 +30,11 @@ class UserController extends Controller
     public function index()
     {
         $users_data = UserData::all();
-        //dd($users_data);
-
+        
+        // add user Online status
         foreach ($users_data as $key) {
-            //echo $key['user_id'];
-            //echo Cache::has('user-is-online-' . $key['user_id']).'<br/>';
             $key['user_isOnline'] = Cache::has('user-is-online-' . $key['user_id']);
         };
-
-        //dd($users_data);
 
         return view('users.users', ['users_data' => $users_data]);
     }
