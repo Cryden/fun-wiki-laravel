@@ -12,72 +12,120 @@
     @yield('meta')
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+    <div id="app" >
+    <div class="shadow"></div>
+        <header>
+            <div class="mobile_nav">
+                <div class="header_logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('fonts/logo.svg') }}" height="30px" alt="Site logo">
                     </a>
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('profile') }}"> User Profile </a>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
+                <div class="main_nav_open_button">
+                    <div class="menu_button icon-menu"></div>
                 </div>
             </div>
-        </nav>
+            <div class="main_nav">
+                <div class="header_logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('fonts/logo.svg') }}" alt="Site logo">
+                    </a>
+                    <h1>Энциклопедия фантастических вселенных</h1>
+                </div>
+                <div class="header_nav">
+                    <div id="cssmenu">
+                            <ul>
+                                <li class="active"><a href="index.html">Новости</a>
+                                </li>
+                                <li class="has-sub"><a href="universes.html">Вселенные</a>
+                                    <ul>
+                                        <li class="has-sub"><a href="universe.html">Вселенная</a>
+                                            <ul>
+                                                <li class="has-sub"><a href="books.html">Книги</a>
+                                                    <ul>
+                                                        <li> <a href="book.html">Книга</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-sub"><a href="books.html">Фильмы</a>
+                                                    <ul>
+                                                        <li> <a href="book.html">Фильм</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub"> <a href="#">Создатели</a>
+                                    <ul>
+                                        <li> <a href="#">Авторы</a>
+                                        </li>
+                                        <li><a href="#">Компании</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Жанры фантастики</a>
+                                </li>
+                                <li><a href="about.html">О проекте</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="main_nav_close_button">
+                    <div class="menu_button icon-close"></div>
+                </div>
+            </div>
+        </header>
 
-        @yield('content')
+        <main>
+            <div class="content_title">
+                @yield('page_title')
+            </div>
+            <div class="content">
+                <div class="column">
+                    @yield('content')
+                </div>
+            </div>
+            <div class="content_footer">
+                <div class="social_pages_text">Присоединяйтесь к нам</div>
+                <div class="social_pages">
+                    <div class="social_button facebook icon-facebook"></div>
+                    <div class="social_button vk icon-vk"></div>
+                    <div class="social_button twitter icon-twitter"></div>
+                    <div class="social_button googleplus icon-googleplus"></div>
+                </div>
+             </div>
+        </main>
+
+        <footer>
+            <div class="footer_copyright">
+                <div class="copyright">
+                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2016</p>
+                </div>
+            </div>
+            <div class="theme_selector">
+                <div class="selector dark" id="s_dark"></div>
+                <div class="selector light" id="s_light"></div>
+            </div>
+            <div class="footer_menu">
+                <i class="footer_button icon-edit active"></i>
+                <i class="footer_button icon-favorite"></i>
+                <i class="footer_button icon-search"></i>
+                @if (Auth::guest())
+                    <a href="{{ route('login') }}"><i class="footer_button icon-profile"></i></a>
+                @else
+                    <a href="{{ route('profile') }}"><i class="footer_button icon-profile"></i></a>
+                @endif
+            </div>
+        </footer>
 
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

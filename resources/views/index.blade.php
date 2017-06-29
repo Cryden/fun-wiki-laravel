@@ -1,21 +1,15 @@
 @extends('layouts.main')
 
+@section('page_title')
+<h1><strong>24</strong> октября <strong>2016</strong></h1>
+@endsection
+
 @section('title')
 <title>{{ config('app.name', 'Laravel') }} | Main </title>
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    LARAVEL
-                </div>
-            </div>
-        </div>
-    </div>
+<div>
+ Добро пожаловать!
 </div>
 @endsection
