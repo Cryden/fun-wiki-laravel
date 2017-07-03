@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('page_title')
-<h1><strong>24</strong> октября <strong>2016</strong></h1>
+<h1><strong>24</strong> октября <strong>2016</strong>Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!</h1>
 @endsection
 
 @section('title')

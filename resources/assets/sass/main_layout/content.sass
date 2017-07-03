@@ -3,19 +3,26 @@ main
   min-height: 100vh
   background: $color-base
   margin-top: 60px
-  margin-bottom: 40px
+  margin-bottom: 50px
   display: flex
   flex-direction: column
+
   .content_title
-    color: $color-main-light
+    
     width: 100%
-    margin-top: 30px
-    margin-bottom: 30px
-    height: 30px
-    border-right: 3px solid $color-second
-    text-align: right
-    padding-right: 27px
-    line-height: 45px
+    margin-top: 15px
+    margin-bottom: 15px
+    min-height: 24px
+    border-left: 3px solid $color-second
+    
+    h1
+      color: $color-main-light
+      text-align: left
+      padding-left: 27px
+      padding-right: 27px
+      line-height: 36px
+      font-size: 14px
+
   .content
     min-height: calc(100vh - 210px)
     .column
@@ -66,14 +73,30 @@ main
   background: #D94A3D
   color: white
 
-@media (min-width: 769px)
+@media (min-width: 426px)
 
   main
     margin-top: 0
     margin-bottom: 0
-    width: calc(100% - 200px)
-    margin-left: 70px
+    width: calc(100% - 120px)
+    margin-left: 60px
     box-shadow: 6px 0 24px #101010
+
+    .content_title
+      width: 100%
+      margin-top: 30px
+      margin-bottom: 30px
+      min-height: 24px
+      border: none
+      border-right: 3px solid $color-second
+      
+      h1
+        color: $color-main-light
+        text-align: right
+        padding-right: 27px
+        line-height: 36px
+        font-size: 14px
+
     .content
       .column
         margin-left: 30px

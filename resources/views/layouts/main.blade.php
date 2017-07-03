@@ -12,30 +12,27 @@
     @yield('meta')
 
     <!-- Styles -->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <style><?php include(public_path().'\css\main.css'); ?></style>
+
 </head>
 <body>
     <div id="app" >
-    <div class="shadow"></div>
+
+        <div class="shadow"></div>
+
         <header>
             <div class="mobile_nav">
-                <div class="header_logo">
-                    <a href="{{ url('/') }}">
-                        <img src="{{ asset('fonts/logo.svg') }}" height="30px" alt="Site logo">
-                    </a>
-                </div>
-                <div class="main_nav_open_button">
-                    <div class="menu_button icon-menu"></div>
+                <a href="{{ url('/') }}"><div class="header_logo"></div></a>
+                <div class="menu_button">
+                    <i id="menu_open_button" class=" icon-menu"></i>
                 </div>
             </div>
             <div class="main_nav">
                 <div class="header_logo">
-                    <a href="{{ url('/') }}">
-                        <img src="{{ asset('fonts/logo.svg') }}" alt="Site logo">
-                    </a>
-                    <h1>Энциклопедия фантастических вселенных</h1>
+                    <a href="{{ url('/') }}"><div class="header_logo_img"></div></a>
+                    <div class="header_logo_text">Энциклопедия фантастических вселенных</div>
                 </div>
-                <div class="header_nav">
+                <div class="header_menu">
                     <div id="cssmenu">
                             <ul>
                                 <li class="active"><a href="index.html">Новости</a>
@@ -75,8 +72,8 @@
                             </ul>
                     </div>
                 </div>
-                <div class="main_nav_close_button">
-                    <div class="menu_button icon-close"></div>
+                <div class="menu_button">
+                    <i id="menu_close_button" class= icon-favorite"></i>
                 </div>
             </div>
         </header>
@@ -107,21 +104,19 @@
                     <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2016</p>
                 </div>
             </div>
-            <div class="theme_selector">
-                <div class="selector dark" id="s_dark"></div>
-                <div class="selector light" id="s_light"></div>
-            </div>
             <div class="footer_menu">
                 <i class="footer_button icon-edit active"></i>
                 <i class="footer_button icon-favorite"></i>
                 <i class="footer_button icon-search"></i>
                 @if (Auth::guest())
-                    <a href="{{ route('login') }}"><i class="footer_button icon-profile"></i></a>
+                    <a class="footer_button" href="{{ route('login') }}"><i class="icon-profile"></i></a>
                 @else
-                    <a href="{{ route('profile') }}"><i class="footer_button icon-profile"></i></a>
+                    <a class="footer_button" href="{{ route('profile') }}"><i class="icon-profile"></i></a>
                 @endif
             </div>
         </footer>
+
+        @yield('shema')
 
     </div>
 

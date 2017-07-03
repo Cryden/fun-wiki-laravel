@@ -11,17 +11,16 @@ function menu_display() {
                 left: "-=390",
             }, 500);
             $(".shadow").css("display", "none");
-            $(".main_nav_close_button").hide(500);
-            $(".main_nav_open_button").show(500);
+            $("#menu_close_button").hide(500);
+            $("#menu_open_button").show(500);
             display_menu = true;
         } else {
             $(".main_nav").animate({
                 left: "+=390",
             }, 500);
             $(".shadow").css("display", "block");
-            //$(".main_nav_close_button").css("display", "block");
-            $(".main_nav_close_button").show(500);
-            $(".main_nav_open_button").hide(5);
+            $("#menu_close_button").show(500);
+            $("#menu_open_button").hide(500);
             display_menu = false;
         }
     });
