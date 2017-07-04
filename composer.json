@@ -10,7 +10,8 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "socialiteproviders/google": "^3.0",
-        "socialiteproviders/vkontakte": "^3.0"
+        "socialiteproviders/vkontakte": "^3.0",
+        "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
