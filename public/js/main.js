@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 52);
+/******/ 	return __webpack_require__(__webpack_require__.s = 47);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -41331,9 +41331,9 @@ __webpack_require__(27);
 
 console.log('script init');
 
-__webpack_require__(46);
-__webpack_require__(47);
-__webpack_require__(45);
+__webpack_require__(41);
+__webpack_require__(42);
+__webpack_require__(40);
 //require ('./modules/main/social.js');
 //require ('./modules/main/js_loader.js');
 
@@ -41345,7 +41345,7 @@ window.Vue = __webpack_require__(31);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', __webpack_require__(48));
+Vue.component('example', __webpack_require__(43));
 
 var app = new Vue({
   el: '#app'
@@ -41366,12 +41366,7 @@ var app = new Vue({
 /***/ }),
 /* 37 */,
 /* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -41400,7 +41395,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 45 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $ = __webpack_require__(7);
@@ -41416,7 +41411,7 @@ $('#s_light').click(function () {
 });
 
 /***/ }),
-/* 46 */
+/* 41 */
 /***/ (function(module, exports) {
 
 !function () {
@@ -41451,7 +41446,7 @@ $('#s_light').click(function () {
 }();
 
 /***/ }),
-/* 47 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $ = __webpack_require__(7);
@@ -41509,14 +41504,14 @@ $(document).ready(function () {
 });
 
 /***/ }),
-/* 48 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(49)(
+var Component = __webpack_require__(44)(
   /* script */
-  __webpack_require__(44),
+  __webpack_require__(39),
   /* template */
-  __webpack_require__(50),
+  __webpack_require__(45),
   /* scopeId */
   null,
   /* cssModules */
@@ -41543,7 +41538,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 49 */
+/* 44 */
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -41600,7 +41595,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 50 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -41629,8 +41624,8 @@ if (false) {
 }
 
 /***/ }),
-/* 51 */,
-/* 52 */
+/* 46 */,
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(34);
