@@ -11,7 +11,6 @@
 |
 */
 
-
 // Main Routes
 Route::get('/', function () {
     return view('index');
@@ -21,16 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 // OAuth Routes
-Route::get('/auth/{provider}', 				'Auth\AuthController@redirectToProvider');
-Route::get('/auth/{provider}/callback', 	'Auth\AuthController@handleProviderCallback');
+Route::get('/auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('/auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 
 // User routes
 
-Route::get('/user/profile', 				'User\UserController@userProfile')->name('profile');
-Route::get('/user/{user_id}', 				'User\UserController@userInfo');
+Route::get('/user/profile', 'User\UserController@userProfile')->name('profile');
+Route::get('/user/{user_id}', 'User\UserController@userInfo');
 
 // Dashboard routes
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
-	Route::get('/', 'Admin\HomeController@index')->name('home');
-	Route::get('/users', 'User\UserController@index');
+    Route::get('/', 'Admin\HomeController@index')->name('home');
+    Route::get('/users', 'User\UserController@index');
 });

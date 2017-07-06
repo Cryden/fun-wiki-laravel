@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Запись не найдена.',
+    'failed'   => 'Запись не найдена.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

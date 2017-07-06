@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
 use App\User;
 use App\UserData;
 use Auth;
@@ -30,18 +28,18 @@ class UserController extends Controller
     public function index()
     {
         $users_data = UserData::all();
-        
+
         // add user Online status
         foreach ($users_data as $key) {
-            $key['user_isOnline'] = Cache::has('user-is-online-' . $key['user_id']);
-        };
+            $key['user_isOnline'] = Cache::has('user-is-online-'.$key['user_id']);
+        }
 
         return view('users.users', ['users_data' => $users_data]);
     }
 
     public function userInfo($user_id)
     {
-        $users = UserData::where( 'user_slug', $user_id)->first();
+        $users = UserData::where('user_slug', $user_id)->first();
 
         return view('users.user', $users);
     }
@@ -50,9 +48,9 @@ class UserController extends Controller
     {
         $user = Auth::user();
 
-        $user_data = UserData::where( 'user_id', $user->id)->first();
+        $user_data = UserData::where('user_id', $user->id)->first();
 
-        $user_slug = 'id'.str_pad($user->id, 10, "0", STR_PAD_LEFT);
+        $user_slug = 'id'.str_pad($user->id, 10, '0', STR_PAD_LEFT);
         $user_name = $user->name;
 
         if (!$user_data) {
@@ -60,14 +58,13 @@ class UserController extends Controller
                 'user_slug'     => $user_slug,
                 'user_name'     => $user_name,
             ]);
-                
+
             $account->user()->associate($user);
             $account->save();
         }
 
-        $user_data = UserData::where( 'user_id', $user->id)->first();
+        $user_data = UserData::where('user_id', $user->id)->first();
 
         return view('users.profile', $user_data);
     }
 }
-

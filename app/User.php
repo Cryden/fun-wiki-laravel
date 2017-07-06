@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -29,10 +29,9 @@ class User extends Authenticatable
 
     public static function createByProvider($providerUser)
     {
-        return User::create([
+        return self::create([
             'email' => $providerUser->getEmail(),
             'name'  => $providerUser->getName(),
         ]);
     }
-
 }
