@@ -43,7 +43,7 @@
                 <a class="navbar-logo" href="{{ url('/') }}">
                   <img alt="Brand" src="{{ asset('images/logo.svg') }}">
                 </a>
-                <div class="navbar-menu-button"><i class="glyphicon glyphicon-menu-hamburger"></i></div>
+                <div class="navbar-menu-button"><i class="fa fa-bars"></i></div>
           </nav>
           <!-- /top navigation -->
 

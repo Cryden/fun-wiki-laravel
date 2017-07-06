@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 //require('./../../../bower_components/gentelella/src/js/custom.js');
+//require('./../../../bower_components/gentelella/src/js/custom.js');
 //require('./../../../bower_components/gentelella/src/js/helpers/smartresize.js');
 //require('./../../../bower_components/gentelella/vendors/fastclick/lib/fastclick.js');
 //require('./../../../bower_components/gentelella/vendors/nprogress/nprogress.js');
