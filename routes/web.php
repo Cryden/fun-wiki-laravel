@@ -32,5 +32,5 @@ Route::get('/user/{user_id}', 				'User\UserController@userInfo');
 // Dashboard routes
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 	Route::get('/', 'Admin\HomeController@index')->name('home');
-	Route::get('/users', 'User\UserController@index');
+	Route::get('/users', 'User\UserController@index')->name('admin.users');
 });

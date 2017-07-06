@@ -6,6 +6,8 @@
 
 @section('content')
 
+@include('layouts.admin.top_tiles')
+
 <div class="x_panel">
     <div class="x_title">
         <h2>Main</h2>
