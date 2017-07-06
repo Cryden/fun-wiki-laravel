@@ -39,7 +39,7 @@
         <main>
 
           <!-- top navigation -->
-          <nav class="navbar navbar-fixed-top">
+          <nav class="navbar sticky-top">
                 <a class="navbar-logo" href="{{ url('/') }}">
                   <img alt="Brand" src="{{ asset('images/logo.svg') }}">
                 </a>
@@ -55,7 +55,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            CRYDEsigN
           </div>
         </footer>
         <!-- /footer content -->

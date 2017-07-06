@@ -7,7 +7,7 @@
 @section('content')
 
 
-<div class="container-liquid">
+<div class="container">
 
     <div class="starter-template">
         <h1>Bootstrap starter template</h1>
@@ -22,5 +22,3 @@
 </div><!-- /.container -->
 
 @endsection
-
-
