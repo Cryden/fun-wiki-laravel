@@ -41,7 +41,7 @@
           <!-- top navigation -->
           <nav class="navbar sticky-top">
                 <a class="navbar-logo" href="{{ url('/') }}">
-                  <img alt="Brand" src="{{ asset('images/logo.svg') }}">
+                  <i class="logo"></i>
                 </a>
                 <div class="navbar-menu-button"><i class="fa fa-bars"></i></div>
           </nav>

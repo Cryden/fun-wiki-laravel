@@ -14,15 +14,21 @@ body
     box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75)
 
 header
-  display: none
   position: fixed
   top: 0
-  width: 100%
-  height: 70px
+  left: -320px
+  +laptop
+    left: 100px
+    width: 260px
+    height: 100vh
+    background: $color-base
+    box-shadow: 6px 0px 20px -2px rgba(0,0,0,0.75)
 
 main
   width: 100%
   min-height: 100vh
+  +laptop
+    padding-left: 260px
 
   .navbar // bootstrap update
     background: $color-base
@@ -37,14 +43,20 @@ main
       display: none
 
     .navbar-logo
-      padding: 15px
-      height: 70px
+      margin: 15px
+      .logo
+        width: 60px
+        height: 30px
+        display: block
+        background: url("../fonts/logo.svg") no-repeat
+        background-size: cover
+
 
     .navbar-menu-button
-      padding: 15px 30px
+      padding: 20px
       font-size: 20px
-      line-height: 40px
-      height: 70px
+      line-height: 20px
+      height: 60px
 
 footer
   position: fixed
