@@ -19,6 +19,7 @@
 
   <body id="app">
     <div class="wrapper">
+      <div class="shadow"></div>
         <!-- header content -->
         <header>
               <!-- menu logo -->
@@ -32,6 +33,7 @@
               <!-- sidebar menu -->
               @include('layouts.admin.sidebar_menu')
               <!-- /sidebar menu -->
+              <i class="fa fa-close close_btn"></i>
         </header>
         <!-- /header content -->
 
@@ -41,9 +43,9 @@
           <!-- top navigation -->
           <nav class="navbar sticky-top">
                 <a class="navbar-logo" href="{{ url('/') }}">
-                  <i class="logo"></i>
+                  <img class="logo" src="{{ url("../fonts/logo.svg") }}" alt="logo">
                 </a>
-                <div class="navbar-menu-button"><i class="fa fa-bars"></i></div>
+                <div class="navbar-menu-button"><i class="fa fa-bars open_btn"></i></div>
           </nav>
           <!-- /top navigation -->
 
@@ -54,9 +56,21 @@
 
         <!-- footer content -->
         <footer>
-          <div class="pull-right">
-            CRYDEsigN
-          </div>
+            <div class="footer_copyright">
+                <div class="copyright">
+                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2016</p>
+                </div>
+            </div>
+            <div class="footer_menu">
+                <i class="footer_button fa fa-edit active"></i>
+                <i class="footer_button fa fa-star"></i>
+                <i class="footer_button fa fa-search"></i>
+                @if (Auth::guest())
+                    <a class="footer_button" href="{{ route('login') }}"><i class="fa fa-user-o"></i></a>
+                @else
+                    <a class="footer_button" href="{{ route('profile') }}"><i class="fa fa-user"></i></a>
+                @endif
+            </div>
         </footer>
         <!-- /footer content -->
     </div>

@@ -1,5 +1,7 @@
 <?php
 
+ob_start('ob_gzhandler');
+
 /**
  * Laravel - A PHP Framework For Web Artisans.
  *
