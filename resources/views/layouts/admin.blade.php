@@ -22,10 +22,10 @@
       <div class="shadow"></div>
         <!-- header content -->
         <header>
-              <!-- menu logo -->
-              @include('layouts.admin.menu_logo')
-              <!-- /menu logo -->
-
+          <!-- menu logo -->
+          @include('layouts.admin.menu_logo')
+          <!-- /menu logo -->
+          <div class="sidebar_menu">
               <!-- menu profile quick info -->
               @include('layouts.admin.menu_profile_quick_info')
               <!-- /menu profile quick info -->
@@ -34,6 +34,7 @@
               @include('layouts.admin.sidebar_menu')
               <!-- /sidebar menu -->
               <i class="fa fa-close close_btn"></i>
+          </div>
         </header>
         <!-- /header content -->
 
@@ -58,12 +59,12 @@
         <footer>
             <div class="footer_copyright">
                 <div class="copyright">
-                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2016</p>
+                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2017</p>
                 </div>
             </div>
             <div class="footer_menu">
                 <i class="footer_button fa fa-edit active"></i>
-                <i class="footer_button fa fa-star"></i>
+                <i class="footer_button fa fa-star-o"></i>
                 <i class="footer_button fa fa-search"></i>
                 @if (Auth::guest())
                     <a class="footer_button" href="{{ route('login') }}"><i class="fa fa-user-o"></i></a>

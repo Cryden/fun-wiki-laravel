@@ -1,6 +1,5 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 // Variables
 @import "variables";
@@ -10,6 +9,8 @@
 @import "bower_components/bootstrap/scss/bootstrap";
 
 // Fomt Awesome
-@import "bower_components/gentelella/vendors/font-awesome/scss/font-awesome.scss";
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
 
 @import "admin_layout/style";
+@import "admin_layout/main";
+@import "admin_layout/footer";

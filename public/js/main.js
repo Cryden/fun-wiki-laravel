@@ -471,7 +471,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(30)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(31)))
 
 /***/ }),
 /* 2 */
@@ -15411,7 +15411,7 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(29);
+window._ = __webpack_require__(30);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -15466,6 +15466,41 @@ if (token) {
 
 /***/ }),
 /* 29 */
+/***/ (function(module, exports) {
+
+!function () {
+    function e(e, t, n) {
+        e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n);
+    }
+
+    function t(e) {
+        return window.localStorage && localStorage.font_css_cache && localStorage.font_css_cache_file === e;
+    }
+
+    function n() {
+        if (window.localStorage && window.XMLHttpRequest) {
+            if (t(o)) a(localStorage.font_css_cache);else {
+                var n = new XMLHttpRequest();
+                n.open("GET", o, !0), e(n, "load", function () {
+                    4 === n.readyState && (a(n.responseText), localStorage.font_css_cache = n.responseText, localStorage.font_css_cache_file = o);
+                }), n.send();
+            }
+        } else {
+            var c = document.createElement("link");
+            c.href = o, c.rel = "stylesheet", c.type = "text/css", document.getElementsByTagName("head")[0].appendChild(c), document.cookie = "font_css_cache";
+        }
+    }
+
+    function a(e) {
+        var t = document.createElement("style");
+        t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t);
+    }
+    var o = "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&amp;subset=cyrillic-ext";
+    window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n);
+}();
+
+/***/ }),
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -32554,10 +32589,10 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(32)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8), __webpack_require__(33)(module)))
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -32747,7 +32782,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42446,7 +42481,7 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -42474,8 +42509,8 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 33 */,
-/* 34 */
+/* 34 */,
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -42489,13 +42524,13 @@ __webpack_require__(28);
 
 console.log('script init');
 
-__webpack_require__(39);
+__webpack_require__(29);
 __webpack_require__(40);
-__webpack_require__(38);
+__webpack_require__(39);
 //require ('./modules/main/social.js');
 //require ('./modules/main/js_loader.js');
 
-window.Vue = __webpack_require__(31);
+window.Vue = __webpack_require__(32);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -42510,12 +42545,6 @@ var app = new Vue({
 });
 
 /***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 36 */
 /***/ (function(module, exports) {
 
@@ -42523,6 +42552,12 @@ var app = new Vue({
 
 /***/ }),
 /* 37 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -42551,7 +42586,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $ = __webpack_require__(7);
@@ -42565,41 +42600,6 @@ $('#s_light').click(function () {
   $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/light.css'));
   console.log('change');
 });
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-!function () {
-    function e(e, t, n) {
-        e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n);
-    }
-
-    function t(e) {
-        return window.localStorage && localStorage.font_css_cache && localStorage.font_css_cache_file === e;
-    }
-
-    function n() {
-        if (window.localStorage && window.XMLHttpRequest) {
-            if (t(o)) a(localStorage.font_css_cache);else {
-                var n = new XMLHttpRequest();
-                n.open("GET", o, !0), e(n, "load", function () {
-                    4 === n.readyState && (a(n.responseText), localStorage.font_css_cache = n.responseText, localStorage.font_css_cache_file = o);
-                }), n.send();
-            }
-        } else {
-            var c = document.createElement("link");
-            c.href = o, c.rel = "stylesheet", c.type = "text/css", document.getElementsByTagName("head")[0].appendChild(c), document.cookie = "font_css_cache";
-        }
-    }
-
-    function a(e) {
-        var t = document.createElement("style");
-        t.innerHTML = e, document.getElementsByTagName("head")[0].appendChild(t);
-    }
-    var o = "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i&amp;subset=cyrillic-ext";
-    window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n);
-}();
 
 /***/ }),
 /* 40 */
@@ -42665,7 +42665,7 @@ $(document).ready(function () {
 
 var Component = __webpack_require__(42)(
   /* script */
-  __webpack_require__(37),
+  __webpack_require__(38),
   /* template */
   __webpack_require__(43),
   /* scopeId */
@@ -42784,9 +42784,9 @@ if (false) {
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(34);
 __webpack_require__(35);
-module.exports = __webpack_require__(36);
+__webpack_require__(36);
+module.exports = __webpack_require__(37);
 
 
 /***/ })

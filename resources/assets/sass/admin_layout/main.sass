@@ -1,0 +1,27 @@
+main
+  width: 100%
+  min-height: 100vh
+  padding-bottom: 50px
+  +laptop
+    padding-left: 260px
+    padding-bottom: 0
+
+  .navbar // bootstrap update
+    background: $color-base
+    border: 0
+    box-shadow: 0 0px 15px black
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    padding: 0
+    +laptop
+      display: none
+
+    .navbar-logo
+      margin: 15px
+      .logo
+        width: 60px
+        height: 30px
+
+    .navbar-menu-button

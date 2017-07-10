@@ -15,6 +15,7 @@ require('./bootstrap');
 //require('./../../../bower_components/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js');
 //require('./../../../bower_components/gentelella/vendors/google-code-prettify/src/prettify.js');
 
+require ('./modules/main/fonts_loader.js');
 
 window.Vue = require('vue');
 
@@ -78,4 +79,11 @@ function menu_display() {
 
 $(document).ready(function() {
     menu_display();
+});
+
+$(function() {
+  $('#main_menu .item_group').on('show.bs.collapse', function(e) {
+    $("#main_menu .item").removeClass("active");
+    $(e.currentTarget).find(".item").addClass("active");
+  });
 });
