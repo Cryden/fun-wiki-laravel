@@ -1,12 +1,11 @@
 {
-  "name": "laravel-gentelella",
-  "description": "The Laravel 5.4 framework with Gentelella template",
+  "name": "fun-wiki.laravel.loc",
+  "description": "my site",
   "keywords": [
     "framework",
     "laravel",
-    "laravel 5.4",
-    "gentelella",
-    "laravel-gentelella",
+    "laravel",
+    "5.4",
     "template",
     "bootstrap",
     "responsive",
@@ -17,10 +16,10 @@
   ],
   "main": "",
   "authors": [
-    "FlorientR"
+    "CRYDEsigN"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/FlorientR/laravel-gentelella",
+  "homepage": "https://github.com/Cryden/fun-wiki.laravel.loc",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -29,6 +28,7 @@
     "tests"
   ],
   "dependencies": {
-    "gentelella": "^1.4.0"
+    "components-font-awesome": "^4.7.0",
+    "bootstrap": "v4.0.0-alpha.6"
   }
 }
