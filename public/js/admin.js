@@ -42596,13 +42596,6 @@ $(document).ready(function () {
     menu_display();
 });
 
-$(function () {
-    $('#main_menu .item_group').on('show.bs.collapse', function (e) {
-        $("#main_menu .item").removeClass("active");
-        $(e.currentTarget).find(".item").addClass("active");
-    });
-});
-
 /***/ }),
 /* 35 */,
 /* 36 */,

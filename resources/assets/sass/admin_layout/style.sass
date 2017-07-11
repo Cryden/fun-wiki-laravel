@@ -110,37 +110,46 @@ header
   display: flex
   flex-direction: column
 
-  li
+  .item    
     height: 40px
     width: 100%
     line-height: 40px
-    list-style-type: none
     margin: 0
     padding: 0
-    -webkit-padding-start: 0
+    display: flex
+    align-content: space-around
 
-  li>ul
-    height: 40px
-    width: 100%
-    line-height: 40px
-    list-style-type: none
-    margin: 0
-    padding: 0
-    -webkit-padding-start: 0
+    a
+      color: $color-main
+      font-size: 14px
+      text-decoration: none
+      width: 100%
 
-  .list_item_group
-    padding: 0
-    margin: 0
-    margin-left: 15px
+  .item_dropdown
+    background: $color-base
+  .item_dropdown>a.collapsed>.menu_icon_dropdown
+    transform-origin: center
+    transform: rotate(180deg)
 
-  a 
-    color: $color-main
-    font-size: 14px
-    text-decoration: none
+  .item_group>.collapse
+    background: rgba(0, 0, 0, 0.15)
 
   .menu_icon
     font-size: 20px
     margin: 10px
+
+  .menu_icon_dropdown
+    font-size: 12px
+    margin: 10px
+    float: right
+
+  .item
+    &:hover
+      background-color: rgba(0, 0, 0, 0.15)
+
+  li, ul
+    list-style-type: none
+    -webkit-padding-start: 0
 
   .active
     border-left: 3px solid red
