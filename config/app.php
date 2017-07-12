@@ -183,6 +183,11 @@ return [
         /* Socialite providers */
         SocialiteProviders\Manager\ServiceProvider::class,
 
+        /* Ekko - добавляет класс Активна к ссылкам  
+           https://github.com/laravelista/Ekko
+        */
+        Laravelista\Ekko\EkkoServiceProvider::class,
+
     ],
 
     /*
@@ -233,6 +238,7 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 
     ],
 

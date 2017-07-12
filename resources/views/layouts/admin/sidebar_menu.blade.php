@@ -1,7 +1,7 @@
 <div id="main_menu" role="tablist" aria-multiselectable="true">
  
-  <li class="item">
-    <a href=" {{url ('/admin/users')}}"><i class="menu_icon fa fa-home"></i> Home </a>
+  <li class="item {{ isActiveURL('/admin/') }} " >
+    <a href=" {{url ('/admin/')}}"><i class="menu_icon fa fa-home"></i> Home </a>
   </li>
 
   <div class="item_group">

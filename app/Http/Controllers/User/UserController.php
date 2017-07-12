@@ -25,17 +25,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $users_data = UserData::all();
 
-        // add user Online status
-        foreach ($users_data as $key) {
-            $key['user_isOnline'] = Cache::has('user-is-online-'.$key['user_id']);
-        }
-
-        return view('users.users', ['users_data' => $users_data]);
-    }
 
     public function userInfo($user_id)
     {
