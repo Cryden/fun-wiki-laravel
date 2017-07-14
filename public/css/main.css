@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html,body,div,span,main,h1,h2,h3,h4,h5,h6,p,a,address,img,small,strong,sub,b,i,center,ul,li,form,label,table,tbody,thead,tr,th,td,footer,header,menu,nav,section,mark {
+html,body,div,span,main,h1,h2,h3,h4,h5,h6,p,a,address,img,strong,sub,b,i,center,ul,li,form,label,table,tbody,thead,tr,th,footer,header,menu,nav,section {
   margin: 0;
   padding: 0;
   border: 0;

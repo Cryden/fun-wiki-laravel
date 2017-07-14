@@ -4,7 +4,6 @@ main
   padding-bottom: 50px
   display: flex
   flex-direction: column
-  color: $color-base
   +laptop
     padding-left: 260px
     padding-bottom: 0
@@ -38,6 +37,9 @@ main
       height: 40px
       margin: 15px 0
       display: block
+      +tablet
+        margin: 20px 0
+        padding-right: 20px
       +laptop
         margin: 40px 0
         padding-right: 40px
@@ -49,5 +51,7 @@ main
         color: $color-main
 
     &__content
-      margin-left: 40px
-      margin-right: 40px
+      +tablet
+        margin: 0 20px
+      +laptop
+        margin: 0 40px
