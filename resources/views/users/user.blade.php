@@ -1,18 +1,20 @@
 @extends('layouts.main')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Страница пользователя</div>
+@section('title')
+<title>{{ config('app.name', 'Laravel') }} | Страница пользователя </title>
+@endsection
 
-                <div class="panel-body">
-                        <p>Это пользователь {{ $user_name }}</p>
-                        <img src={{ $user_photo }}>
-                </div>
-            </div>
-        </div>
-    </div>
+@section('content')
+<div class="page__title">
+    <h1> Страница пользователя </h1>
 </div>
+
+<div class="page__content">
+    <p>Это пользователь {{ $user_name }}</p>
+    <img src={{ $user_photo }}>
+</div>
+
+<div class="page__footer">
+</div>
+
 @endsection

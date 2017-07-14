@@ -51,6 +51,7 @@ class UserController extends Controller
         }
 
         $user_data = UserData::where('user_id', $user->id)->first();
+        
 
         return view('users.profile', $user_data);
     }

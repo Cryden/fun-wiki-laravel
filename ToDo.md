@@ -9,3 +9,25 @@
 4. User Roles
 5. Add Categories and Tags
 6. ContactForm
+
+
+## Структура сайта
+
+// Главная
+
+/
+
+// Авторизация
+
+/login
+/register
+/password/reset
+
+// Аутентификация
+
+/auth/{provider}
+/auth/{provider}/callback
+
+// Админка
+
+/admin

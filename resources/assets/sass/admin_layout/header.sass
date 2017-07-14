@@ -88,20 +88,22 @@ header::-webkit-scrollbar
 #main_menu
   display: flex
   flex-direction: column
-  padding-bottom: 40px
+  padding-bottom: 50px
 
   .item    
-    height: 40px
+    height: 50px
     width: 100%
-    line-height: 40px
+    line-height: 50px
     margin: 0
     padding: 0
     display: flex
     align-content: space-around
+    color: #93a4ab
 
     a
-      color: $color-main
+      color: inherit
       font-size: 14px
+      line-height: 50px
       text-decoration: none
       width: 100%
 
@@ -122,17 +124,20 @@ header::-webkit-scrollbar
 
   .menu_icon
     font-size: 20px
-    margin: 10px
+    margin: 15px
     width: 20px
 
   .menu_icon_dropdown
     font-size: 12px
-    margin: 14px 10px 
+    margin: 19px 15px 
     float: right
+    color: $color-second
 
   .item
     &:hover
       background-color: rgba(0, 0, 0, 0.15)
+      a 
+        color: $color-main
 
   li, ul
     list-style-type: none

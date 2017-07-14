@@ -11,7 +11,7 @@
 
 <div class="container-liquid">
 
-<table class="table table-inverse table-responsive">
+<table class="table table-inverse">
   <thead>
     <tr>
       <th>#</th>

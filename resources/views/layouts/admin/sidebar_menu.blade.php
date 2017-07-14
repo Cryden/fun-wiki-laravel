@@ -1,4 +1,4 @@
-<div id="main_menu" role="tablist" aria-multiselectable="true">
+<div id="main_menu" role="tablist" aria-multiselectable="true" class="">
  
   <li class="item {{ isActiveURL('/admin/') }} " >
     <a href=" {{url ('/admin/')}}"><i class="menu_icon fa fa-home"></i> Home </a>

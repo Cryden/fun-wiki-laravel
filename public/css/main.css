@@ -3,7 +3,7 @@
    License: none (public domain)
 */
 
-html,body,div,span,main,h1,h2,h3,h4,h5,h6,p,a,address,img,strong,sub,b,i,center,ul,li,form,label,table,tbody,thead,tr,th,footer,header,menu,nav,section {
+html,body,div,span,main,h1,h2,h3,h4,h5,h6,p,a,address,img,strong,b,i,center,ul,li,form,label,table,tbody,thead,tr,th,footer,header,menu,nav,section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -68,8 +68,8 @@ a {
 
 @font-face {
   font-family: 'icomoon';
-  src: url(/fonts/icomoon.eot?cdb95743b7e93bafb255a4687479f94d);
-  src: url(/fonts/icomoon.eot?cdb95743b7e93bafb255a4687479f94d) format("embedded-opentype"), url(/fonts/icomoon.ttf?84085934da1a166d39f839fdcd01a27c) format("truetype"), url(/fonts/icomoon.woff?1a3c8c2e93839cde6ac63a8024b551fe) format("woff"), url(/fonts/icomoon.svg?e76923770c0fc234c95d2cca4e2bb40b) format("svg");
+  src: url(/fonts/icomoon.eot?0c23549bc038cb0dae38253bf662d42b);
+  src: url(/fonts/icomoon.eot?0c23549bc038cb0dae38253bf662d42b) format("embedded-opentype"), url(/fonts/icomoon.ttf?7ea5028bfaa7a00418fcc21eba7fec41) format("truetype"), url(/fonts/icomoon.woff?4f1336e5cf4fb43714e62905d57cdb47) format("woff"), url(/fonts/icomoon.svg?e76923770c0fc234c95d2cca4e2bb40b) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -92,12 +92,16 @@ a {
   content: "\e900";
 }
 
-.icon-info:before {
-  content: "\e903";
+.icon-news:before {
+  content: "\e901";
 }
 
-.icon-favorite:before {
-  content: "\e906";
+.icon-resume:before {
+  content: "\e902";
+}
+
+.icon-info:before {
+  content: "\e903";
 }
 
 .icon-edit:before {
@@ -120,46 +124,7 @@ a {
   content: "\ea90";
 }
 
-.icon-googleplus:before {
-  content: "\ea88";
-}
-
 /* <header> styles */
-
-header .mobile_nav {
-  width: 100%;
-  height: 60px;
-  background: #434A54;
-  position: fixed;
-  top: 0;
-  box-shadow: 0 0px 15px black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  z-index: 5;
-}
-
-header .mobile_nav .header_logo {
-  margin: 15px;
-  width: 60px;
-  height: 30px;
-  background: url(/fonts/logo.svg?d761ae7c622d8d55cbd365b436c85fc0) no-repeat;
-  background-size: cover;
-}
-
-header .mobile_nav .menu_button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .mobile_nav .menu_button #menu_open_button {
-  padding: 20px 15px;
-  font-size: 20px;
-}
 
 header .main_nav {
   z-index: 17;
@@ -226,35 +191,7 @@ header .main_nav::-webkit-scrollbar {
   }
 }
 
-@media (min-width: 426px) {
-  header .mobile_nav {
-    width: 60px;
-    height: 100vh;
-    background: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-
-  header .mobile_nav .header_logo {
-    margin: 15px;
-    width: 30px;
-    height: 30px;
-    background: url(/fonts/logo_icon.svg?7e9cb78f82aefa52735805dccef94ae1) no-repeat;
-    background-size: cover;
-  }
-
-  header .mobile_nav .menu_button .menu_open_button {
-    padding: 20px;
-  }
-}
-
 @media (min-width: 1025px) {
-  header .mobile_nav {
-    display: none;
-  }
-
   header .main_nav {
     width: 320px;
     left: 100px !important;
@@ -264,70 +201,6 @@ header .main_nav::-webkit-scrollbar {
   header .main_nav .main_nav_close_button {
     display: none !important;
   }
-}
-
-#cssmenu,#cssmenu ul,#cssmenu ul li {
-  display: block;
-  font-size: 13px;
-  list-style: none outside none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  color: white;
-}
-
-#cssmenu a,#cssmenu ul a,#cssmenu ul li a {
-  color: white;
-  cursor: pointer;
-  height: 30px;
-  line-height: 30px;
-  display: block;
-}
-
-#cssmenu a:after,#cssmenu ul a:after,#cssmenu ul li a:after {
-  content: "";
-  display: block;
-  height: 4px;
-  position: absolute;
-  right: 35px;
-  top: 10px;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  width: 4px;
-  z-index: 10;
-}
-
-#cssmenu .active {
-  font-weight: 400;
-}
-
-#cssmenu ul ul {
-  display: none;
-}
-
-#cssmenu ul li > a {
-  padding-left: 35px;
-}
-
-#cssmenu ul ul li > a {
-  padding-left: 50px;
-}
-
-#cssmenu ul ul ul li > a {
-  padding-left: 65px;
-}
-
-#cssmenu ul ul ul ul li > a {
-  padding-left: 80px;
-}
-
-#cssmenu ul ul li.has-sub > a:after {
-  border-left: 1px solid #ff715b;
-  border-top: 1px solid #ff715b;
-}
-
-#cssmenu a:hover {
-  background: url(/images/left-menu-hover.png?5ed0d82c26b8f9bc0dc18a2686d644ca) repeat-y;
 }
 
 main {
@@ -366,11 +239,6 @@ main .content {
   min-height: calc(100vh - 210px);
 }
 
-main .content .column {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 main .content_footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,41 +254,6 @@ main .content_footer {
   height: 90px;
 }
 
-main .content_footer .social_pages_text {
-  height: 30px;
-  line-height: 45px;
-  padding-right: 8px;
-  margin-right: 8px;
-  border-right: 1px solid #ff715b;
-  font-size: 14px;
-  margin-top: 30px;
-  display: none;
-}
-
-main .content_footer .social_pages {
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  margin-top: 30px;
-}
-
-.social_button {
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  margin-right: 8px;
-  font-size: 16px;
-  background: #93a8ac;
-  color: white;
-  vertical-align: center;
-  padding: 7px;
-}
-
 .vk:hover {
   background: #45668E;
   color: white;
@@ -433,11 +266,6 @@ main .content_footer .social_pages {
 
 .twitter:hover {
   background: #4090FF;
-  color: white;
-}
-
-.googleplus:hover {
-  background: #D94A3D;
   color: white;
 }
 
@@ -467,29 +295,11 @@ main .content_footer .social_pages {
     font-size: 14px;
   }
 
-  main .content .column {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
   main .content_footer {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
     margin-top: 30px;
-  }
-
-  main .content_footer .social_pages_text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  main .content_footer .social_pages {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 30px;
   }
 }
 
@@ -497,10 +307,6 @@ main .content_footer .social_pages {
   main {
     width: calc(100% - 520px);
     margin-left: 420px;
-  }
-
-  main .content .column {
-    margin-left: 60px;
   }
 }
 

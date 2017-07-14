@@ -34,4 +34,9 @@ class User extends Authenticatable
             'name'  => $providerUser->getName(),
         ]);
     }
+
+    public function userData()
+    {
+        return $this->belongsTo(UserData::class);
+    }
 }

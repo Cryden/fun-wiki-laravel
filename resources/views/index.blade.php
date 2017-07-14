@@ -1,15 +1,21 @@
 @extends('layouts.main')
 
-@section('page_title')
-<h1><strong>24</strong> октября <strong>2016</strong>Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!Добро пожаловать!</h1>
-@endsection
-
 @section('title')
 <title>{{ config('app.name', 'Laravel') }} | Main </title>
 @endsection
 
 @section('content')
-<div>
- Добро пожаловать!
+<div class="page__title">
+    <h1> Главная </h1>
 </div>
+
+<div class="page__content">
+	<div>
+	 Добро пожаловать!
+	</div>
+</div>
+
+<div class="page__footer">
+</div>
+
 @endsection
