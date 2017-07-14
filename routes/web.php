@@ -23,6 +23,6 @@ Route::get('/user/profile', 'User\UserController@userProfile')->name('profile');
 Route::get('/user/{user_id}', 'User\UserController@userInfo');
 // Dashboard routes
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
-    Route::get('/', 		'Admin\AdminController@index')->name('dashboard');
-    Route::get('/users', 	'Admin\AdminController@users')->name('admin.users');
+    Route::get('/', 'Admin\AdminController@index')->name('dashboard');
+    Route::get('/users', 'Admin\AdminController@users')->name('admin.users');
 });

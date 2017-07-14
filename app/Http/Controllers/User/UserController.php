@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\UserData;
 use Auth;
-use Illuminate\Support\Facades\Cache;
 
 class UserController extends Controller
 {
@@ -25,8 +24,6 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-
     public function userInfo($user_id)
     {
         $users = UserData::where('user_slug', $user_id)->first();
