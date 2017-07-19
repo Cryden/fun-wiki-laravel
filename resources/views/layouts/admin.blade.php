@@ -71,7 +71,7 @@
             <div class="footer_menu">
                 <i class="footer_button fa icon-edit active"></i>
                 <i class="footer_button fa icon-star"></i>
-                <i class="footer_button fa fa-search"></i>
+                <i class="footer_button fa icon-search"></i>
                 @if (Auth::guest())
                     <a class="footer_button" href="{{ route('login') }}"><i class="fa icon-user"></i></a>
                 @else
