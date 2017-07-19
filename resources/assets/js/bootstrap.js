@@ -10,7 +10,7 @@ window._ = require('lodash');
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('./../../../bower_components/bootstrap/dist/js/bootstrap.js');
+    require('bootstrap/dist/js/bootstrap.js');
 } catch (e) {}
 
 /**
