@@ -6,13 +6,14 @@ header
   width: 260px
   height: 100vh
   background: $color-base
-  box-shadow: 6px 0px 20px -2px rgba(0,0,0,0.75)    
+  box-shadow: 6px 0px 20px -2px rgba(0,0,0,0.75)
   display: block
   overflow: auto
   -webkit-overflow-scrolling: touch
   -ms-overflow-style: none
   +laptop
     left: 60px!important
+    width: 320px
   +desktop
     left: 100px!important
 
@@ -29,7 +30,7 @@ header::-webkit-scrollbar
 
 .menu_logo
   position: fixed
-  width: 260px
+  width: 320px
   height: 120px
   display: none
   background-color: $color-base
@@ -42,7 +43,8 @@ header::-webkit-scrollbar
     position: absolute
     top: 90px
     color: $color-main
-    font-size: 10px
+    font-size: 11px
+    font-weight: 200
     display: block
     width: 100%
     text-align: center
@@ -70,12 +72,12 @@ header::-webkit-scrollbar
     flex-direction: column
     margin: 15px
 
-    span 
+    span
       font-size: 13px
       line-height: 30px
       color: #BAB8B8
 
-    h2 
+    h2
       font-size: 14px
       color: #ECF0F1
       margin: 0
@@ -90,7 +92,7 @@ header::-webkit-scrollbar
   flex-direction: column
   padding-bottom: 50px
 
-  .item    
+  .item
     height: 50px
     width: 100%
     line-height: 50px
@@ -102,9 +104,10 @@ header::-webkit-scrollbar
 
     a
       color: inherit
-      font-size: 14px
-      line-height: 50px
+      font-size: 18px
+      line-height: 36px
       text-decoration: none
+      height: 50px
       width: 100%
 
   .item_dropdown
@@ -124,19 +127,19 @@ header::-webkit-scrollbar
 
   .menu_icon
     font-size: 20px
-    margin: 15px
+    margin: 15px 20px
     width: 20px
 
   .menu_icon_dropdown
     font-size: 12px
-    margin: 19px 15px 
+    margin: 19px 20px
     float: right
     color: $color-second
 
   .item
     &:hover
       background-color: rgba(0, 0, 0, 0.15)
-      a 
+      a
         color: $color-main
 
   li, ul
@@ -146,6 +149,8 @@ header::-webkit-scrollbar
 
   .active
     background: url("../images/left-menu-hover.png") repeat-y
+    a
+      color: $color-main
 
 // /menu_section
 
@@ -157,7 +162,7 @@ header::-webkit-scrollbar
   padding: 20px
   font-size: 20px
   line-height: 20px
-  height: 60px 
+  height: 60px
   display: block
 
 .close_btn

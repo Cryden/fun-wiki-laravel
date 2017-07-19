@@ -20,12 +20,12 @@
   <body id="app">
     <div class="wrapper">
       <div class="shadow"></div>
-      
+
       <!-- add css styles -->
 
       <div class="collapsing"></div>
 
-      
+
         <!-- header content -->
         <header>
           <!-- menu logo -->
@@ -37,7 +37,7 @@
                     @include('layouts.admin.menu_profile_quick_info')
                 @endif
               <!-- menu profile quick info -->
-              
+
               <!-- /menu profile quick info -->
 
               <!-- sidebar menu -->
@@ -75,7 +75,7 @@
             <div class="footer_menu">
                 <i class="footer_button fa icon-edit active"></i>
                 <i class="footer_button fa icon-star"></i>
-                <i class="footer_button fa fa-search"></i>
+                <i class="footer_button fa icon-search"></i>
                 @if (Auth::guest())
                     <a class="footer_button" href="{{ route('login') }}"><i class="fa icon-user"></i></a>
                 @else

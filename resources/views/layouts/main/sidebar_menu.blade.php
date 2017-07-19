@@ -1,12 +1,12 @@
 <div id="main_menu" role="tablist" aria-multiselectable="true" class="">
- 
+
   <li class="item {{ isActiveURL('/') }} " >
     <a href=" {{url ('/')}}"><i class="menu_icon fa icon-news"></i> Новости </a>
   </li>
 
   <div class="item_group">
     <li class="item item_dropdown" role="tab" id="universe">
-      <a class="collapsed" data-toggle="collapse" data-parent="#main_menu" href="#collapseUnivrse_item" aria-expanded="false" aria-controls="collapseUnivrse_item"><i class="menu_icon fa fa-file-o"></i> Вселенные <i class="menu_icon_dropdown fa fa-chevron-up"></i></a>
+      <a class="collapsed" data-toggle="collapse" data-parent="#main_menu" href="#collapseUnivrse_item" aria-expanded="false" aria-controls="collapseUnivrse_item"><i class="menu_icon fa icon-universe"></i> Вселенные <i class="menu_icon_dropdown fa fa-chevron-up"></i></a>
     </li>
 
     <ul id="collapseUnivrse_item" class="collapse item_list" role="tabpanel" aria-labelledby="universe">
