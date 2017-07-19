@@ -13,8 +13,10 @@
     @yield('title')
 
     <!-- Bootstrap -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+    <style>
+        <?php include(public_path().'\css\style.css'); ?>
+    </style>
   </head>
 
   <body id="app">
