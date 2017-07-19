@@ -1,20 +1,3 @@
-
-// Fonts
-//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
-@import "variables";
-@import "mixins";
-
-
-// Bootstrap
-//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-// Main layout style
-@import "main_layout/reset";
-@import "main_layout/base";
-@import "main_layout/fonts.scss";
-@import "main_layout/header";
-@import "main_layout/menu";
-@import "main_layout/content";
-@import "main_layout/footer";
+@import "helpers/variables";
+@import "helpers/mixins";

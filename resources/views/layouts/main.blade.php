@@ -13,7 +13,7 @@
     @yield('title')
 
     <!-- Bootstrap -->
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
   </head>
 

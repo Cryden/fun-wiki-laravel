@@ -13,8 +13,8 @@ const { mix } = require('laravel-mix');
 
 mix.js('resources/assets/js/main.js',  'public/js')
    .js('resources/assets/js/admin.js', 'public/js')
-   .sass('resources/assets/sass/main.scss',  'public/css')
-   .sass('resources/assets/sass/admin.scss', 'public/css')
+   .sass('resources/assets/sass/style.scss',  'public/css')
+   //.sass('resources/assets/sass/admin.scss', 'public/css')
    .options({
 //   extractVueStyles: false, // Extract .vue component styling to file, rather than inline.
  //   processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.

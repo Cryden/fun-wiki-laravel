@@ -13,19 +13,19 @@
     @yield('title')
 
     <!-- Bootstrap -->
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
   </head>
 
   <body id="app">
     <div class="wrapper">
       <div class="shadow"></div>
-      
+
       <!-- add css styles -->
 
       <div class="collapsing"></div>
 
-      
+
         <!-- header content -->
         <header>
           <!-- menu logo -->

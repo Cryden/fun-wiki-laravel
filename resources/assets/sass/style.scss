@@ -1,0 +1,20 @@
+
+// Fonts
+
+// Variables
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// Bootstrap
+@import "bower_components/bootstrap/scss/bootstrap";
+
+// Fomt Awesome
+@import "bower_components/components-font-awesome/scss/font-awesome.scss";
+
+// Font icomoon
+@import "helpers/icomoon/style";
+
+@import "layout_style/style";
+@import "layout_style/header";
+@import "layout_style/main";
+@import "layout_style/footer";
